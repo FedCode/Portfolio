@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sandeep Thakur | Fullstack Developer</title>
+    <meta name="description"
+        content="Arjun Sharma - Senior Fullstack MERN Developer & Gen AI Engineer based in Chandigarh, India." />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">    
+
+
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="logo">&lt;<span>Sandeep</span><em>Thakur</em>/&gt;</div>
+        <ul class="nav-links">
+            <li><a onclick="go('about')">About</a></li>
+            <li><a onclick="go('skills')">Skills</a></li>
+            <li><a onclick="go('projects')">Projects</a></li>
+            <li><a onclick="go('experience')">Experience</a></li>
+            <li><a onclick="go('education')">Education</a></li>
+            <li><a onclick="go('contact')">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme">☀️</button>
+            <button class="hire-btn" onclick="go('contact')">Hire Me 🚀</button>
+        </div>
+    </nav>
+
+    <div id="particles"></div>
+
+    <!-- ── HERO ── -->
+    <section id="hero">
+        <div class="hero-bg">
+            <div class="grid-bg"></div>
+            <div class="orb orb1"></div>
+            <div class="orb orb2"></div>
+            <div class="orb orb3"></div>
+        </div>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="badge"><span class="badge-dot"></span> Available for Freelance & Full-time</div>
+                <h1 class="hero-title">
+                    Hi, I'm<br>
+                    <span class="hero-name">Sandeep Thakur</span>
+                </h1>
+                <p class="hero-role">Senior Fullstack Developer &amp; <code>Gen AI</code> Engineer</p>
+                <p class="hero-sub">I build end-to-end web applications with the MERN stack, integrate Generative AI
+                    &amp; LLMs into products, and engineer SEO strategies that drive real organic growth.</p>
+                <div class="hero-btns">
+                    <button class="btn-primary" onclick="go('projects')">View My Work →</button>
+                    <button class="btn-outline" onclick="go('contact')">Let's Talk 👋</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="num">20+</div>
+                        <div class="lbl">Projects</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">3+</div>
+                        <div class="lbl">Years Exp.</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">15+</div>
+                        <div class="lbl">Clients</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">4.9★</div>
+                        <div class="lbl">Rating</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="avatar-wrap">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-ring2"></div>
+                    <div class="avatar-img">
+                        <div class="avatar-placeholder">
+                            <!-- SVG Dummy Developer Avatar -->
+                            <img src="images/sandeep.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="avatar-badge">
+                        <div class="ab-dot"></div>
+                        <div class="ab-text">Open to Work</div>
+                    </div>
+                    <div class="floating-chip chip1">⚛️ React Dev</div>
+                    <div class="floating-chip chip2">🤖 Gen AI</div>
+                    <div class="floating-chip chip3">🔍 SEO Expert</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-code-box">
+                    <div class="dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+                    </div>
+                    <div class="code-content">
+                        <span class="cm">// arjun_sharma.js</span><br /><br />
+                        <span class="kw">const</span> <span class="obj">arjun</span> = {<br />
+                        &nbsp;&nbsp;<span class="prop">name</span>: <span class="str">"Arjun Sharma"</span>,<br />
+                        &nbsp;&nbsp;<span class="prop">role</span>: <span class="str">"Senior Fullstack
+                            Dev"</span>,<br />
+                        &nbsp;&nbsp;<span class="prop">location</span>: <span class="str">"Chandigarh, India
+                            🇮🇳"</span>,<br />
+                        &nbsp;&nbsp;<span class="prop">stack</span>: [<span class="str">"MongoDB"</span>, <span
+                            class="str">"Express"</span>,<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                            class="str">"React"</span>, <span class="str">"Node.js"</span>],<br />
+                        &nbsp;&nbsp;<span class="prop">superpower</span>: <span class="str">"Gen AI
+                            Integration"</span>,<br />
+                        &nbsp;&nbsp;<span class="prop">seo</span>: <span class="str">"On-Page &amp;
+                            Technical"</span>,<br />
+                        &nbsp;&nbsp;<span class="prop">experience</span>: <span class="num">3</span> + <span
+                            class="str">" years"</span>,<br />
+                        &nbsp;&nbsp;<span class="prop">status</span>: <span class="str">"Open to Work ✓"</span>,<br />
+                        &nbsp;&nbsp;<span class="fn">build</span>() {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> <span class="str">"amazing products
+                            🚀"</span>;<br />
+                        &nbsp;&nbsp;}<br />
+                        };
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="section-label">01 — About Me</div>
+                    <h2 class="sh">Crafting Digital<br />Experiences</h2>
+                    <p>I'm a passionate Fullstack Developer from Chandigarh, India with 3+ years of experience building
+                        production-ready web applications using the MERN stack.</p>
+                    <p>I specialize in integrating Generative AI — from GPT-4 powered features to RAG pipelines and
+                        LangChain agents — into real-world products. I'm also a certified SEO professional with hands-on
+                        experience in on-page optimization and Core Web Vitals.</p>
+                    <p>I love turning complex problems into elegant, user-friendly solutions that scale.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <div class="info-lbl">Location</div>
+                            <div class="info-val">Chandigarh, India</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-lbl">Experience</div>
+                            <div class="info-val">3+ Years</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-lbl">Availability</div>
+                            <div class="info-val" style="color:var(--green)">Open to Work</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-lbl">Languages</div>
+                            <div class="info-val">English, Hindi</div>
+                        </div>
+                    </div>
+                    <button class="dl-btn" onclick="alert('Resume download — add your PDF link here!')">📄 Download
+                        Resume</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-label">02 — Skills</div>
+            <h2 class="sh">Tech Stack & Expertise</h2>
+            <p class="section-sub">Tools and technologies I use to ship production-ready fullstack applications with AI
+                integration.</p>
+            <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-label">03 — Projects</div>
+            <h2 class="sh">Featured Work</h2>
+            <p class="section-sub">MERN stack apps, AI-powered tools, and SEO-optimized platforms I've built from
+                scratch.</p>
+            <div class="proj-filter" id="filterRow"></div>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-label">04 — Experience</div>
+            <h2 class="sh" style="text-align:center;margin-bottom:48px">Work History</h2>
+            <div class="timeline" id="timeline"></div>
+        </div>
+    </section>
+
+    <!-- ── EDUCATION ── -->
+    <section id="education">
+        <div class="container">
+            <div class="section-label">05 — Education</div>
+            <h2 class="sh">Academic Background</h2>
+            <p class="section-sub">The foundation that powers the code I write every day.</p>
+            <div class="edu-grid" id="eduGrid"></div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="section-label">06 — Contact</div>
+                <h2 class="sh">Let's Build<br />Something Great</h2>
+                <p>Whether you have a project idea, a collaboration in mind, or just want to say hi — my inbox is always
+                    open. I typically respond within 24 hours.</p>
+                <div class="contact-links">
+                    <div class="clink">
+                        <div class="clink-icon gh">🐙</div>
+                        <div>
+                            <div class="clink-lbl">GitHub</div>
+                            <div class="clink-val">github.com/arjunsharma</div>
+                        </div>
+                    </div>
+                    <div class="clink">
+                        <div class="clink-icon li">💼</div>
+                        <div>
+                            <div class="clink-lbl">LinkedIn</div>
+                            <div class="clink-val">linkedin.com/in/arjunsharma</div>
+                        </div>
+                    </div>
+                    <div class="clink">
+                        <div class="clink-icon em">📧</div>
+                        <div>
+                            <div class="clink-lbl">Email</div>
+                            <div class="clink-val">arjun@devcraft.in</div>
+                        </div>
+                    </div>
+                    <div class="clink">
+                        <div class="clink-icon tw">🐦</div>
+                        <div>
+                            <div class="clink-lbl">Twitter / X</div>
+                            <div class="clink-val">@arjun_builds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <div class="cf-title">Send a Message 📬</div>
+                <div class="form-group"><label>Your Name</label><input type="text" id="cName" placeholder="John Doe" />
+                </div>
+                <div class="form-group"><label>Email Address</label><input type="email" id="cEmail"
+                        placeholder="john@example.com" /></div>
+                <div class="form-group"><label>Subject</label><input type="text" id="cSubject"
+                        placeholder="Project Inquiry / Collaboration" /></div>
+                <div class="form-group"><label>Message</label><textarea id="cMsg"
+                        placeholder="Tell me about your project or idea..."></textarea></div>
+                <button class="send-btn" onclick="sendMsg()">Send Message 🚀</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="fc">// Built with ❤️ &amp; ☕ by &lt;Arjun Sharma /&gt; · 2025</div>
+        <div class="fl">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Resume</a>
+            <a href="#">Blog</a>
+        </div>
+        <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+    </footer>
+
+    <!-- ADD PROJECT MODAL -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <div class="modal-hdr">
+                <div class="modal-title">➕ Add New Project</div>
+                <button class="modal-close" onclick="closeModal()">✕</button>
+            </div>
+            <div class="form-group"><label>Project Title *</label><input id="pTitle" type="text"
+                    placeholder="e.g. AI Chat Dashboard" /></div>
+            <div class="form-group"><label>Description</label><textarea id="pDesc"
+                    placeholder="What does this project do?"></textarea></div>
+            <div class="form-group">
+                <label>Tech Tags (click to select)</label>
+                <div class="tag-select-wrap" id="tagWrap"></div>
+            </div>
+            <div class="form-group"><label>Category Color</label>
+                <select id="pColor">
+                    <option value="t1">Purple / Teal</option>
+                    <option value="t2">Teal / Blue</option>
+                    <option value="t3">Orange / Red</option>
+                    <option value="t4">Green / Blue</option>
+                    <option value="t5">Pink / Purple</option>
+                    <option value="t6">Blue / Teal</option>
+                    <option value="t7">Lavender</option>
+                    <option value="t8">Yellow / Orange</option>
+                </select>
+            </div>
+            <div class="form-group"><label>Emoji</label><input id="pEmoji" type="text" placeholder="🚀" maxlength="4" />
+            </div>
+            <div class="form-group"><label>Live URL</label><input id="pLive" type="url"
+                    placeholder="https://myproject.vercel.app" /></div>
+            <div class="form-group"><label>GitHub URL</label><input id="pGit" type="url"
+                    placeholder="https://github.com/user/repo" /></div>
+            <div class="modal-btns">
+                <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+                <button class="save-btn" onclick="saveProject()">Save Project 🚀</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>
