@@ -52,7 +52,7 @@
             { k: 'ai', l: 'AI/GPT' }, { k: 'gen', l: 'Gen AI' }, { k: 'seo', l: 'SEO' }, { k: 'next', l: 'Next.js' }, { k: 'ts', l: 'TypeScript' }
         ];
         let projects = [
-            { title: 'MindMate AI', desc: 'A GPT-4 powered mental health journaling app with mood analytics, RAG-based therapy recommendations, and personalized daily insight dashboard.', tags: ['mern', 'ai', 'gen'], color: 't1', emoji: '🧠', live: '#', git: '#', featured: true },
+            { title: 'MindMate AI', desc: 'A GPT-4 powered mental health journaling app with mood analytics, RAG-based therapy recommendations, and personalized daily insight dashboard.', tags: ['mern', 'ai', 'gen'], color: 't1', emoji: '🧠', live: 'https://smartnotesaifrontend.onrender.com/', git: '#', featured: true },
             { title: 'ShopSmart E-Commerce', desc: 'Full-featured e-commerce platform with Stripe payments, real-time inventory management, admin analytics, and automated AI-generated SEO meta tags.', tags: ['mern', 'react', 'seo', 'mongo'], color: 't2', emoji: '🛍️', live: '#', git: '#', featured: false },
             { title: 'DevCollab Hub', desc: 'Real-time collaborative code editor with WebSockets, GitHub OAuth, multi-user project rooms, and an AI pair-programmer powered by GPT-4.', tags: ['mern', 'node', 'ai', 'ts'], color: 't3', emoji: '💻', live: '#', git: '#', featured: true },
             { title: 'RankFlow SEO Suite', desc: 'Technical SEO audit tool that crawls sites, generates structured reports, tracks SERP rankings, and uses Gen AI to write optimized meta content at scale.', tags: ['react', 'node', 'seo', 'gen'], color: 't4', emoji: '📈', live: '#', git: '#', featured: false },
