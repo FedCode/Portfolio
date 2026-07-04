@@ -49,15 +49,28 @@
 
         // ── PROJECTS DATA ──
         const ALL_TAGS = [
-            { k: 'react', l: 'React.js' }, { k: 'ts', l: 'TypeScript' }, { k: 'next', l: 'Next.js' },
-            { k: 'redux', l: 'Redux' }, { k: 'wp', l: 'WordPress' }, { k: 'shopify', l: 'Shopify' },
-            { k: 'tailwind', l: 'Tailwind' }
+            { k: 'react', l: 'React.js' }, { k: 'node', l: 'Node.js' }, { k: 'mongo', l: 'MongoDB' },
+            { k: 'html', l: 'HTML/CSS/JS' }, { k: 'wp', l: 'WordPress' }, { k: 'shopify', l: 'Shopify' }
         ];
-        // NOTE: Placeholder projects only — add your live & GitHub links when ready.
         let projects = [
-            { title: 'React JS Web App', desc: 'A responsive single-page application built with React.js, TypeScript and Redux Toolkit. Live demo and repo link coming soon.', tags: ['react', 'ts', 'redux'], color: 't1', emoji: '⚛️', live: '#', git: '#', featured: true },
-            { title: 'WordPress Website', desc: 'A custom WordPress site built with Elementor, focused on clean design and fast page speed. Live link coming soon.', tags: ['wp'], color: 't4', emoji: '📝', live: '#', git: '#', featured: false },
-            { title: 'Shopify Store', desc: 'A fully customized Shopify storefront with a tailored theme and optimized product pages. Live link coming soon.', tags: ['shopify'], color: 't6', emoji: '🛍️', live: '#', git: '#', featured: false },
+            { title: 'CodeCrack Solutions', desc: 'A business website built with React.js, focused on clean UI and fast performance.', tags: ['react'], color: 't1', emoji: '⚛️', live: 'http://codecracksolutions.com/', git: '#', featured: true },
+            { title: 'SmartNotes AI', desc: 'A fullstack AI-powered note-taking app built with React Context API on the frontend and Node.js, Express & MongoDB on the backend.', tags: ['react', 'node', 'mongo'], color: 't3', emoji: '🧠', live: 'https://smartnotesaifrontend.onrender.com/', git: '#', featured: true },
+            { title: 'MedPro Dental', desc: 'A responsive dental clinic website built with HTML, CSS & JavaScript.', tags: ['html'], color: 't2', emoji: '🦷', live: 'https://medprodental.com/', git: '#', featured: false },
+            { title: 'Taylor Morrison', desc: 'A responsive website built with HTML, CSS & JavaScript.', tags: ['html'], color: 't7', emoji: '🏠', live: 'https://www.taylormorrison.com/', git: '#', featured: false },
+            { title: 'CBITSS eCommerce', desc: 'A WordPress eCommerce product page built for CBITSS.', tags: ['wp'], color: 't4', emoji: '🛒', live: 'https://www.cbitss.app/product/web/', git: '#', featured: false },
+            { title: 'Motherland Hospital Dharamshala', desc: 'A custom WordPress website for a hospital in Dharamshala.', tags: ['wp'], color: 't4', emoji: '🏥', live: 'https://www.motherlandhospitaldharamshala.com/', git: '#', featured: false },
+            { title: 'Chandigarh Cab Express', desc: 'A WordPress website for a Chandigarh-based cab booking service.', tags: ['wp'], color: 't5', emoji: '🚕', live: 'https://www.chandigarhcabexpress.com/', git: '#', featured: false },
+            { title: 'MK Enterprises', desc: 'A WordPress business website for MK Enterprises.', tags: ['wp'], color: 't4', emoji: '🏢', live: 'https://www.mk-enterprises.in/', git: '#', featured: false },
+            { title: 'English Pro', desc: 'A WordPress website for an English learning platform.', tags: ['wp'], color: 't5', emoji: '📚', live: 'https://www.english-pro.in/', git: '#', featured: false },
+            { title: 'EB5 Marketplace', desc: 'A WordPress website for an EB-5 investment marketplace.', tags: ['wp'], color: 't4', emoji: '💼', live: 'https://eb5marketplace.com/', git: '#', featured: false },
+            { title: 'CBITSS', desc: 'The main WordPress website for CBITSS.', tags: ['wp'], color: 't5', emoji: '🌐', live: 'https://www.cbitss.in/', git: '#', featured: false },
+            { title: 'Vendi Shop', desc: 'A customized Shopify storefront for Vendi.', tags: ['shopify'], color: 't6', emoji: '🛍️', live: 'https://shop.vendiapp.com/', git: '#', featured: false },
+            { title: 'Myers Detox Store', desc: 'A Shopify store built for Myers Detox, with a tailored theme and product pages.', tags: ['shopify'], color: 't6', emoji: '🧴', live: 'https://store.myersdetox.com/', git: '#', featured: false },
+            { title: 'The Jiu Jiteiro', desc: 'A Shopify storefront for a Brazilian Jiu-Jitsu brand.', tags: ['shopify'], color: 't8', emoji: '🥋', live: 'https://thejiujiteiro.com/', git: '#', featured: false },
+            { title: 'Keystone Farms Cheese', desc: 'A Shopify store for a specialty cheese brand.', tags: ['shopify'], color: 't6', emoji: '🧀', live: 'https://www.keystonefarmscheese.com/', git: '#', featured: false },
+            { title: 'MBBCVM', desc: 'A custom Shopify storefront.', tags: ['shopify'], color: 't8', emoji: '🛒', live: 'https://mbbcvm.com/', git: '#', featured: false },
+            { title: 'Noleuderm', desc: 'A Shopify store for a skincare brand.', tags: ['shopify'], color: 't6', emoji: '🧴', live: 'https://www.noleuderm.com/', git: '#', featured: false },
+            { title: 'One More Game Studio', desc: 'A Shopify storefront built for a game studio brand.', tags: ['shopify'], color: 't8', emoji: '🎮', live: 'https://onemoregame.studio/', git: '#', featured: false },
         ];
         let activeFilter = 'all';
 
@@ -128,9 +141,12 @@
 
         // ── EXPERIENCE ──
         const EXP = [
-            { date: 'Jan 2024 – Present', role: 'Senior Frontend Developer', comp: 'TechNova Solutions · Chandigarh (Full-time)', desc: 'Lead development of responsive, high-performance UIs using React.js, Next.js & TypeScript for 50k+ monthly users. Built reusable component libraries with Redux Toolkit & RTK Query, and integrated Claude/Gemini AI tools into internal workflows.', badges: ['React.js', 'Next.js', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS'] },
-            { date: 'Jun 2022 – Dec 2023', role: 'Frontend Developer', comp: 'StartupXYZ · Remote (Full-time)', desc: 'Built and maintained multiple React.js interfaces from Figma designs. Developed and customized WordPress and Shopify storefronts for clients. Improved page speed and responsiveness across devices.', badges: ['React.js', 'Redux', 'WordPress', 'Shopify', 'Bootstrap'] },
-            { date: 'Jan 2022 – May 2022', role: 'Junior Frontend Developer', comp: 'Digital Agency Pvt. Ltd. · Chandigarh (Contract)', desc: 'Developed 10+ HTML/CSS/JS & React-based websites for e-commerce clients. Converted Figma/Photoshop designs into pixel-perfect, responsive pages with Bootstrap & Tailwind CSS.', badges: ['HTML/CSS/JS', 'React.js', 'jQuery', 'Figma', 'Bootstrap'] },
+            { date: 'Jan 2023 – Present · 3 yrs 7 mos', role: 'Frontend Developer', comp: 'CBitss · Chandigarh, India (Full-time, On-site)', desc: 'Working as a Frontend Developer — building and maintaining responsive web interfaces using React.js, WordPress and Shopify for client projects.', badges: ['React.js', 'WordPress', 'Shopify', 'JavaScript'] },
+            { date: 'Dec 2020 – Nov 2023 · 3 yrs', role: 'Frontend Developer', comp: 'Ivagam Infotech · Tiruvannamalai, Tamil Nadu (Full-time)', desc: 'Developed and maintained frontend interfaces using HTML, CSS, JavaScript, jQuery and React.js for various client websites.', badges: ['HTML/CSS/JS', 'jQuery', 'React.js', 'Bootstrap'] },
+            { date: 'Jul 2019 – Oct 2020 · 1 yr 4 mos', role: 'Frontend Developer', comp: 'Net Solutions · Chandigarh IT Park', desc: 'Built and maintained responsive websites using HTML, CSS, JavaScript and jQuery, converting design mockups into functional pages.', badges: ['HTML/CSS/JS', 'jQuery', 'Bootstrap'] },
+            { date: 'Jan 2018 – Jul 2019 · 1 yr 7 mos', role: 'Frontend Developer', comp: 'Digittrix Infotech Pvt Ltd · Chandigarh, India (Full-time)', desc: 'Developed frontend pages and WordPress websites for client projects, focusing on responsive layouts and cross-browser compatibility.', badges: ['HTML/CSS/JS', 'WordPress', 'jQuery'] },
+            { date: 'Feb 2017 – Aug 2017 · 7 mos', role: 'Web Designer', comp: 'Digitech Software Solutions Pvt Ltd · Panchkula, Haryana (Full-time)', desc: 'Designed and built website layouts using HTML, CSS and Photoshop, translating client requirements into web-ready designs.', badges: ['HTML/CSS', 'Photoshop', 'Web Design'] },
+            { date: 'Nov 2015 – Jan 2017 · 1 yr 3 mos', role: 'Web Designer', comp: 'Kindlebit Solutions Pvt. Ltd. · Chandigarh IT Park (Full-time)', desc: 'Started career designing and coding static websites with HTML, CSS and Photoshop, building a strong foundation in web design.', badges: ['HTML/CSS', 'Photoshop', 'Web Design'] },
         ];
         const tl = document.getElementById('timeline');
         EXP.forEach((e, i) => {
@@ -148,9 +164,9 @@
 
         // ── EDUCATION ──
         const EDU = [
-            { icon: '🎓', deg: 'B.Tech — Computer Science', school: 'Punjab Technical University', year: '2018 – 2022', gpa: 'GPA 8.4 / 10', desc: 'Core CS: DSA, DBMS, OS, Computer Networks, Software Engineering. Final year project — a React-based web application.' },
-            { icon: '💻', deg: 'Frontend Development Bootcamp', school: 'Udemy + freeCodeCamp', year: '2022', gpa: '400+ hrs', desc: 'React.js, Next.js, TypeScript, Redux/RTK Query, responsive design with Tailwind CSS & Bootstrap.' },
-            { icon: '🤖', deg: 'Generative AI Tools for Developers', school: 'Self-paced / Online', year: '2023', gpa: 'Certified', desc: 'Practical use of Claude, Gemini, Blackbox AI and n8n automation to speed up frontend development workflows.' },
+            { icon: '🎓', deg: 'BCA', school: 'Himachal Pradesh University (HPU), Shimla', year: '2015', gpa: '66%', desc: 'Bachelor of Computer Applications, covering programming fundamentals, web technologies and software development basics.' },
+            { icon: '🎨', deg: 'Web Design Diploma', school: 'Morph Academy, Chandigarh', year: '6 Months', gpa: 'Certified', desc: 'Hands-on training in web design fundamentals, HTML/CSS and graphic design tools like Photoshop.' },
+            { icon: '💻', deg: 'Frontend Development Certification', school: 'Coding Ninjas', year: '6 Months', gpa: 'Certified', desc: 'Focused training in frontend development covering JavaScript, React.js and modern UI development practices.' },
         ];
         const eg = document.getElementById('eduGrid');
         EDU.forEach(e => {
