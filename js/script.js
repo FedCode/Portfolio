@@ -1,5 +1,4 @@
-    
-        // ── HELPERS ──
+// ── HELPERS ──
         function go(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }) }
         function toast(msg, clr = 'var(--green)') {
             const t = document.getElementById('toast');
@@ -26,12 +25,14 @@
 
         // ── SKILLS ──
         const SKILLS = [
-            { name: 'Frontend — React & Next.js', icon: '⚛️', cls: 'v1', pct: 92, lv: 'Expert', pills: ['React.js', 'Next.js', 'TypeScript', 'Redux', 'Tailwind CSS'] },
-            { name: 'Backend — Node & Express', icon: '🟢', cls: 'v2', pct: 89, lv: 'Expert', pills: ['Node.js', 'Express.js', 'REST API', 'GraphQL', 'JWT Auth'] },
-            { name: 'Database — MongoDB', icon: '🍃', cls: 'v3', pct: 86, lv: 'Advanced', pills: ['MongoDB', 'Mongoose', 'Redis', 'PostgreSQL', 'Firebase'] },
-            { name: 'Generative AI & LLMs', icon: '🤖', cls: 'v4', pct: 82, lv: 'Advanced', pills: ['OpenAI GPT-4', 'LangChain', 'RAG', 'Prompt Eng.', 'Hugging Face'] },
-            { name: 'SEO & On-Page Optimization', icon: '🔍', cls: 'v5', pct: 88, lv: 'Expert', pills: ['Technical SEO', 'Schema Markup', 'Core Web Vitals', 'GA4', 'Ahrefs'] },
-            { name: 'DevOps & Cloud', icon: '☁️', cls: 'v6', pct: 75, lv: 'Intermediate', pills: ['Docker', 'AWS EC2/S3', 'Vercel', 'CI/CD', 'Nginx'] },
+            { name: 'Core Frontend', icon: '🧱', cls: 'v1', pct: 95, lv: 'Expert', pills: ['HTML5', 'CSS3', 'JavaScript', 'jQuery'] },
+            { name: 'UI Frameworks', icon: '🎨', cls: 'v2', pct: 92, lv: 'Expert', pills: ['Tailwind CSS', 'Bootstrap', 'React Bootstrap'] },
+            { name: 'Frontend — React & Next.js', icon: '⚛️', cls: 'v3', pct: 90, lv: 'Expert', pills: ['React.js', 'Next.js', 'TypeScript'] },
+            { name: 'State Management', icon: '🔄', cls: 'v4', pct: 85, lv: 'Advanced', pills: ['Redux', 'Redux Toolkit', 'RTK Query'] },
+            { name: 'Design Tools', icon: '🖌️', cls: 'v5', pct: 80, lv: 'Advanced', pills: ['Adobe Photoshop', 'Figma', 'Zeplin'] },
+            { name: 'Backend Knowledge', icon: '🟢', cls: 'v6', pct: 65, lv: 'Working Knowledge', pills: ['MongoDB', 'Node.js', 'Express.js'] },
+            { name: 'AI Tools', icon: '🤖', cls: 'v1', pct: 82, lv: 'Advanced', pills: ['Claude', 'Gemini', 'Blackbox AI', 'n8n'] },
+            { name: 'CMS Platforms', icon: '🧩', cls: 'v2', pct: 78, lv: 'Advanced', pills: ['WordPress', 'Shopify', 'Wix', 'Elementor', 'Astro'] },
         ];
         const sg = document.getElementById('skillsGrid');
         SKILLS.forEach(s => {
@@ -48,18 +49,15 @@
 
         // ── PROJECTS DATA ──
         const ALL_TAGS = [
-            { k: 'mern', l: 'MERN' }, { k: 'react', l: 'React' }, { k: 'node', l: 'Node.js' }, { k: 'mongo', l: 'MongoDB' },
-            { k: 'ai', l: 'AI/GPT' }, { k: 'gen', l: 'Gen AI' }, { k: 'seo', l: 'SEO' }, { k: 'next', l: 'Next.js' }, { k: 'ts', l: 'TypeScript' }
+            { k: 'react', l: 'React.js' }, { k: 'ts', l: 'TypeScript' }, { k: 'next', l: 'Next.js' },
+            { k: 'redux', l: 'Redux' }, { k: 'wp', l: 'WordPress' }, { k: 'shopify', l: 'Shopify' },
+            { k: 'tailwind', l: 'Tailwind' }
         ];
+        // NOTE: Placeholder projects only — add your live & GitHub links when ready.
         let projects = [
-            { title: 'MindMate AI', desc: 'A GPT-4 powered mental health journaling app with mood analytics, RAG-based therapy recommendations, and personalized daily insight dashboard.', tags: ['mern', 'ai', 'gen'], color: 't1', emoji: '🧠', live: 'https://smartnotesaifrontend.onrender.com/', git: '#', featured: true },
-            { title: 'ShopSmart E-Commerce', desc: 'Full-featured e-commerce platform with Stripe payments, real-time inventory management, admin analytics, and automated AI-generated SEO meta tags.', tags: ['mern', 'react', 'seo', 'mongo'], color: 't2', emoji: '🛍️', live: '#', git: '#', featured: false },
-            { title: 'DevCollab Hub', desc: 'Real-time collaborative code editor with WebSockets, GitHub OAuth, multi-user project rooms, and an AI pair-programmer powered by GPT-4.', tags: ['mern', 'node', 'ai', 'ts'], color: 't3', emoji: '💻', live: '#', git: '#', featured: true },
-            { title: 'RankFlow SEO Suite', desc: 'Technical SEO audit tool that crawls sites, generates structured reports, tracks SERP rankings, and uses Gen AI to write optimized meta content at scale.', tags: ['react', 'node', 'seo', 'gen'], color: 't4', emoji: '📈', live: '#', git: '#', featured: false },
-            { title: 'TalentSync HR Platform', desc: 'AI-powered recruitment SaaS with automated resume screening, skill-match scoring, video interview scheduling, and DEI analytics built on MERN + Next.js.', tags: ['mern', 'ai', 'mongo', 'next'], color: 't5', emoji: '🎯', live: '#', git: '#', featured: true },
-            { title: 'CryptoTrack Dashboard', desc: 'Real-time crypto portfolio tracker with live WebSocket price feeds, interactive D3 charts, news sentiment analysis via Gen AI, and alert notifications.', tags: ['react', 'node', 'gen', 'ts'], color: 't6', emoji: '₿', live: '#', git: '#', featured: false },
-            { title: 'BlogCraft AI CMS', desc: 'Headless CMS with AI content generation, automatic internal linking for SEO, image alt-tag generation, and multi-author workflows built on MERN.', tags: ['mern', 'gen', 'seo', 'mongo'], color: 't7', emoji: '✍️', live: '#', git: '#', featured: false },
-            { title: 'FoodieApp — Delivery Platform', desc: 'Full-stack food delivery app with real-time order tracking, Razorpay/Stripe checkout, restaurant admin panel, and progressive web app support.', tags: ['mern', 'react', 'node'], color: 't8', emoji: '🍕', live: '#', git: '#', featured: false },
+            { title: 'React JS Web App', desc: 'A responsive single-page application built with React.js, TypeScript and Redux Toolkit. Live demo and repo link coming soon.', tags: ['react', 'ts', 'redux'], color: 't1', emoji: '⚛️', live: '#', git: '#', featured: true },
+            { title: 'WordPress Website', desc: 'A custom WordPress site built with Elementor, focused on clean design and fast page speed. Live link coming soon.', tags: ['wp'], color: 't4', emoji: '📝', live: '#', git: '#', featured: false },
+            { title: 'Shopify Store', desc: 'A fully customized Shopify storefront with a tailored theme and optimized product pages. Live link coming soon.', tags: ['shopify'], color: 't6', emoji: '🛍️', live: '#', git: '#', featured: false },
         ];
         let activeFilter = 'all';
 
@@ -114,8 +112,8 @@
             if (!t) { toast('Please enter a project title', 'var(--red)'); return }
             projects.unshift({
                 title: t,
-                desc: document.getElementById('pDesc').value || 'A fullstack web application.',
-                tags: tagSelections.size ? [...tagSelections] : ['mern'],
+                desc: document.getElementById('pDesc').value || 'A frontend web application.',
+                tags: tagSelections.size ? [...tagSelections] : ['react'],
                 color: document.getElementById('pColor').value,
                 emoji: document.getElementById('pEmoji').value || '🚀',
                 live: document.getElementById('pLive').value || '#',
@@ -130,9 +128,9 @@
 
         // ── EXPERIENCE ──
         const EXP = [
-            { date: 'Jan 2024 – Present', role: 'Senior Fullstack Developer', comp: 'TechNova Solutions · Chandigarh (Full-time)', desc: 'Lead development of scalable MERN applications serving 50k+ monthly users. Integrated OpenAI GPT-4 APIs and built a RAG-based internal knowledge base. Reduced page load times by 40% via Next.js SSR. Mentored 4 junior engineers.', badges: ['React', 'Node.js', 'MongoDB', 'OpenAI', 'AWS', 'Docker', 'Redis'] },
-            { date: 'Jun 2022 – Dec 2023', role: 'Fullstack Developer (MERN)', comp: 'StartupXYZ · Remote (Full-time)', desc: 'Built 3 SaaS MVPs from scratch using MERN stack. Implemented technical SEO strategies that grew organic traffic by 180% in 8 months. Integrated Stripe payments, real-time notifications, and multi-tenant architecture.', badges: ['MERN', 'Next.js', 'SEO', 'Stripe', 'WebSockets', 'Tailwind'] },
-            { date: 'Jan 2022 – May 2022', role: 'Frontend Developer', comp: 'Digital Agency Pvt. Ltd. · Chandigarh (Contract)', desc: 'Developed 10+ React-based websites for e-commerce clients. Optimized Core Web Vitals achieving 95+ Lighthouse scores. Implemented structured data markup and on-page SEO, leading to top-3 Google rankings for target keywords.', badges: ['React', 'Next.js', 'TypeScript', 'SEO', 'Lighthouse', 'Schema.org'] },
+            { date: 'Jan 2024 – Present', role: 'Senior Frontend Developer', comp: 'TechNova Solutions · Chandigarh (Full-time)', desc: 'Lead development of responsive, high-performance UIs using React.js, Next.js & TypeScript for 50k+ monthly users. Built reusable component libraries with Redux Toolkit & RTK Query, and integrated Claude/Gemini AI tools into internal workflows.', badges: ['React.js', 'Next.js', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS'] },
+            { date: 'Jun 2022 – Dec 2023', role: 'Frontend Developer', comp: 'StartupXYZ · Remote (Full-time)', desc: 'Built and maintained multiple React.js interfaces from Figma designs. Developed and customized WordPress and Shopify storefronts for clients. Improved page speed and responsiveness across devices.', badges: ['React.js', 'Redux', 'WordPress', 'Shopify', 'Bootstrap'] },
+            { date: 'Jan 2022 – May 2022', role: 'Junior Frontend Developer', comp: 'Digital Agency Pvt. Ltd. · Chandigarh (Contract)', desc: 'Developed 10+ HTML/CSS/JS & React-based websites for e-commerce clients. Converted Figma/Photoshop designs into pixel-perfect, responsive pages with Bootstrap & Tailwind CSS.', badges: ['HTML/CSS/JS', 'React.js', 'jQuery', 'Figma', 'Bootstrap'] },
         ];
         const tl = document.getElementById('timeline');
         EXP.forEach((e, i) => {
@@ -150,10 +148,9 @@
 
         // ── EDUCATION ──
         const EDU = [
-            { icon: '🎓', deg: 'B.Tech — Computer Science', school: 'Punjab Technical University', year: '2018 – 2022', gpa: 'GPA 8.4 / 10', desc: 'Core CS: DSA, DBMS, OS, Computer Networks, Software Engineering. Final year project — AI-based attendance management system.' },
-            { icon: '💻', deg: 'MERN Stack Bootcamp', school: 'Udemy + freeCodeCamp', year: '2022', gpa: '500+ hrs', desc: 'End-to-end MERN stack development, REST APIs, JWT auth, Redux, and deployment on AWS & Vercel.' },
-            { icon: '🤖', deg: 'Generative AI for Developers', school: 'DeepLearning.AI (Coursera)', year: '2023', gpa: 'Certified', desc: 'LLMs, prompt engineering, RAG architectures, fine-tuning, and building AI-powered applications with LangChain.' },
-            { icon: '🔍', deg: 'Technical SEO Certification', school: 'Google Digital Garage + Semrush', year: '2023', gpa: 'Certified', desc: 'Technical SEO fundamentals, Core Web Vitals, crawlability, structured data, on-page optimization, and analytics.' },
+            { icon: '🎓', deg: 'B.Tech — Computer Science', school: 'Punjab Technical University', year: '2018 – 2022', gpa: 'GPA 8.4 / 10', desc: 'Core CS: DSA, DBMS, OS, Computer Networks, Software Engineering. Final year project — a React-based web application.' },
+            { icon: '💻', deg: 'Frontend Development Bootcamp', school: 'Udemy + freeCodeCamp', year: '2022', gpa: '400+ hrs', desc: 'React.js, Next.js, TypeScript, Redux/RTK Query, responsive design with Tailwind CSS & Bootstrap.' },
+            { icon: '🤖', deg: 'Generative AI Tools for Developers', school: 'Self-paced / Online', year: '2023', gpa: 'Certified', desc: 'Practical use of Claude, Gemini, Blackbox AI and n8n automation to speed up frontend development workflows.' },
         ];
         const eg = document.getElementById('eduGrid');
         EDU.forEach(e => {
@@ -191,4 +188,3 @@
                 }
             });
         });
-  
