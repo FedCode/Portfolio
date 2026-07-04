@@ -29,10 +29,12 @@
             { name: 'UI Frameworks', icon: '🎨', cls: 'v2', pct: 92, lv: 'Expert', pills: ['Tailwind CSS', 'Bootstrap', 'React Bootstrap'] },
             { name: 'Frontend — React & Next.js', icon: '⚛️', cls: 'v3', pct: 90, lv: 'Expert', pills: ['React.js', 'Next.js', 'TypeScript'] },
             { name: 'State Management', icon: '🔄', cls: 'v4', pct: 85, lv: 'Advanced', pills: ['Redux', 'Redux Toolkit', 'RTK Query'] },
-            { name: 'Design Tools', icon: '🖌️', cls: 'v5', pct: 80, lv: 'Advanced', pills: ['Adobe Photoshop', 'Figma', 'Zeplin'] },
-            { name: 'Backend Knowledge', icon: '🟢', cls: 'v6', pct: 65, lv: 'Working Knowledge', pills: ['MongoDB', 'Node.js', 'Express.js'] },
-            { name: 'AI Tools', icon: '🤖', cls: 'v1', pct: 82, lv: 'Advanced', pills: ['Claude', 'Gemini', 'Blackbox AI', 'n8n'] },
-            { name: 'CMS Platforms', icon: '🧩', cls: 'v2', pct: 78, lv: 'Advanced', pills: ['WordPress', 'Shopify', 'Wix', 'Elementor', 'Astro'] },
+            { name: 'API Integration', icon: '🔌', cls: 'v5', pct: 88, lv: 'Advanced', pills: ['REST APIs', 'Axios', 'Async/Await', 'Sync/Async JS'] },
+            { name: 'Testing & Validation', icon: '🧪', cls: 'v6', pct: 80, lv: 'Advanced', pills: ['Jest', 'React Testing Library', 'Zod'] },
+            { name: 'Design Tools', icon: '🖌️', cls: 'v1', pct: 80, lv: 'Advanced', pills: ['Adobe Photoshop', 'Figma', 'Zeplin'] },
+            { name: 'Backend Knowledge', icon: '🟢', cls: 'v2', pct: 65, lv: 'Working Knowledge', pills: ['MongoDB', 'Node.js', 'Express.js'] },
+            { name: 'AI Tools', icon: '🤖', cls: 'v3', pct: 82, lv: 'Advanced', pills: ['Claude', 'Gemini', 'Blackbox AI', 'n8n'] },
+            { name: 'CMS Platforms', icon: '🧩', cls: 'v4', pct: 78, lv: 'Advanced', pills: ['WordPress', 'Shopify', 'Wix', 'Elementor', 'Astro'] },
         ];
         const sg = document.getElementById('skillsGrid');
         SKILLS.forEach(s => {
